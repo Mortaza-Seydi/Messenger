@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.ChannelController">
+   <children>
+      <HBox prefHeight="52.0" prefWidth="347.0" style="-fx-background-color: #3a63c9;">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#closeChannelDialog" prefHeight="48.0" prefWidth="29.0" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="35" />
+               </graphic>
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label prefHeight="48.0" prefWidth="325.0" text="New Channel" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#createChannel" prefHeight="48.0" prefWidth="17.0" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="35" />
+               </graphic>
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox prefHeight="56.0" prefWidth="347.0">
+         <children>
+            <ImageView fx:id="channelPhoto" accessibleRole="BUTTON" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#selectChannelPhoto" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Pictures/attach_gallery_pressed.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="101.0" prefWidth="293.0">
+               <children>
+                  <JFXTextField fx:id="channelName" focusColor="#0015ff" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="263.0" promptText="Name" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="channelId" focusColor="#0015ff" labelFloat="true" layoutX="14.0" layoutY="62.0" prefHeight="25.0" prefWidth="263.0" promptText="Id" unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <JFXListView id="background3" fx:id="listView" onMouseClicked="#addUsers" stylesheets="@../../style.css" />
+   </children>
+</VBox>

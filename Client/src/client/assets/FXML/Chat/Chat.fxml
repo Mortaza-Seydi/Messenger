@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.ChatController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="510.0" style="-fx-background-color: #3a63c9;">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#CloseMainDrawer" prefHeight="60.0" prefWidth="83.0" ripplerFill="RED" text=" ">
+               <graphic>
+                  <FontAwesomeIconView fill="RED" glyphName="CLOSE" size="40" wrappingWidth="27.0" />
+               </graphic>
+            </JFXButton>
+            <AnchorPane prefHeight="60.0" prefWidth="153.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="60.0" fitWidth="60.0" layoutX="71.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../Pictures/attach_contact.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <VBox prefHeight="44.0" prefWidth="237.0">
+               <children>
+                  <Label fx:id="name" prefHeight="43.0" prefWidth="237.0" text="Morteza" textFill="#219c92">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="23.0" />
+                     </font></Label>
+                  <Label fx:id="status" prefHeight="48.0" prefWidth="237.0" text="Offline" textFill="RED">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXListView id="background3" fx:id="mainListView" editable="true" onMouseClicked="#listViewClicked" prefHeight="582.0" prefWidth="510.0" showTooltip="true" stylesheets="@../../style.css" />
+      <HBox prefHeight="135.0" prefWidth="510.0">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="53.0" prefWidth="41.0" ripplerFill="#00ff7b" style="-fx-background-color: #ffffff;" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#3a63c9" glyphName="SMILE_ALT" size="30" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXTextArea fx:id="sendField" labelFloat="true" prefHeight="53.0" prefWidth="439.0" promptText="Message">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#sendMessage" prefHeight="53.0" prefWidth="50.0" ripplerFill="#00ff7b" style="-fx-background-color: #ffffff;" textFill="#4400ff">
+               <graphic>
+                  <FontAwesomeIconView fill="#3a63c9" glyphName="SEND" size="30" wrappingWidth="23.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#attach" prefHeight="53.0" prefWidth="62.0" ripplerFill="#00ff7b" style="-fx-background-color: #ffffff;" textFill="#4400ff">
+               <graphic>
+                  <FontAwesomeIconView fill="#3a63c9" glyphName="PAPERCLIP" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

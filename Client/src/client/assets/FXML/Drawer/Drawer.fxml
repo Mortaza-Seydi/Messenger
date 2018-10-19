@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="background2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="240.0" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.DrawerController">
+   <children>
+      <AnchorPane prefHeight="68.0" prefWidth="206.0">
+         <children>
+            <ImageView fitHeight="201.0" fitWidth="240.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Pictures/1.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="name" layoutX="22.0" layoutY="161.0" prefHeight="45.0" prefWidth="224.0" text="Morteza">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profilePhoto" fitHeight="120.0" fitWidth="120.0" layoutX="14.0" layoutY="53.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Pictures/attach_contact.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Separator prefHeight="30.0" prefWidth="240.0" />
+      <JFXButton onAction="#newGroup" prefHeight="63.0" prefWidth="240.0" text="     New Group">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="GROUP" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton onAction="#newChannel" prefHeight="60.0" prefWidth="240.0" ripplerFill="#00ff9d" text="     New Channel">
+         <graphic>
+            <FontAwesomeIconView glyphName="BULLHORN" size="25" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Separator prefHeight="40.0" prefWidth="240.0" />
+      <JFXButton onAction="#list" prefHeight="64.0" prefWidth="240.0" text="     Lists">
+         <graphic>
+            <FontAwesomeIconView glyphName="LIST" size="25" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

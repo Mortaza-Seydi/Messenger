@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.Controller">
+   <children>
+      <JFXListView id="background2" fx:id="listView" editable="true" layoutY="61.0" onMousePressed="#listViewClicked" prefHeight="540.0" prefWidth="239.0" showTooltip="true" stylesheets="@../style.css" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="240.0" layoutY="61.0" overLayVisible="false" prefHeight="540.0" prefWidth="239.0" />
+      <AnchorPane id="background" layoutX="239.0" prefHeight="600.0" prefWidth="467.0" stylesheets="@../style.css">
+         <children>
+            <StackPane fx:id="stackPane" layoutX="41.0" layoutY="73.0" prefHeight="500.0" prefWidth="436.0" />
+            <JFXDrawer fx:id="mainDrawer" defaultDrawerSize="600.0" direction="RIGHT" overLayVisible="false" prefHeight="600.0" prefWidth="516.0" />
+         </children></AnchorPane>
+      <AnchorPane layoutY="-3.0" prefHeight="64.0" prefWidth="239.0" style="-fx-background-color: #3a63c9;">
+         <children>
+            <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="16.0" onMouseClicked="#hamburgerPressed" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: #3a63c9;" />
+            <Label layoutX="69.0" layoutY="16.0" prefHeight="33.0" prefWidth="157.0" text="Messenger" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

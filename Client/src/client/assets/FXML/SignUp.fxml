@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.SignUpController">
+   <children>
+      <Label layoutX="64.0" layoutY="14.0" prefHeight="42.0" prefWidth="170.0" text="Messenger" textFill="#005eff">
+         <font>
+            <Font name="Comic Sans MS Italic" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="42.0" fitWidth="52.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/icon.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="32.0" layoutY="285.0" prefHeight="25.0" prefWidth="214.0" promptText="Password">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></JFXPasswordField>
+      <JFXTextField fx:id="phoneNumber" labelFloat="true" layoutX="32.0" layoutY="99.0" prefHeight="25.0" prefWidth="214.0" promptText="Phone Number">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></JFXTextField>
+      <Label layoutX="321.0" layoutY="12.0" prefHeight="39.0" prefWidth="265.0" text="Thanks For Joining Us" textFill="#2bb28c" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="260.0" layoutY="328.0" onAction="#signUp" prefHeight="39.0" prefWidth="102.0" ripplerFill="RED" style="-fx-background-color: #3900ff;" text="Sign Up" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="260.0">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="name" labelFloat="true" layoutX="32.0" layoutY="161.0" prefHeight="25.0" prefWidth="214.0" promptText="Name">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="username" labelFloat="true" layoutX="32.0" layoutY="223.0" prefHeight="25.0" prefWidth="214.0" promptText="Username">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="imageView" fitHeight="151.0" fitWidth="170.0" focusTraversable="true" layoutX="369.0" layoutY="112.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Pictures/attach_contact.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="391.0" layoutY="273.0" onAction="#uploadPhoto" ripplerFill="#00ff59" text="Upload Profile Photo" textFill="#4400ff">
+         <graphic>
+            <FontAwesomeIconView glyphName="DOWNLOAD" size="20" />
+         </graphic></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="348.0" onAction="#showLogIn" ripplerFill="#00ff2f" text=" ">
+         <graphic>
+            <FontAwesomeIconView glyphName="ARROW_CIRCLE_LEFT" size="30" />
+         </graphic></JFXButton>
+   </children>
+</AnchorPane>

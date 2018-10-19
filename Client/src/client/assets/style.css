@@ -1,0 +1,15 @@
+#background{
+
+    -fx-background-image : url('Pictures/catstile.jpg');
+}
+#background2{
+
+    -fx-background-image : url('Pictures/bg4.jpg');
+}
+#background3{
+
+    -fx-background-image : url('Pictures/1.jpg');
+}
+.list-cell{
+     -fx-background-color : transparent;
+}

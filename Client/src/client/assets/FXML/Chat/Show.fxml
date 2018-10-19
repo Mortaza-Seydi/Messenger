@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="483.0" style="-fx-background-color: rgba(0,0,0,0);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Pictures/attach_contact.png" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="43.0" prefWidth="234.0">
+         <children>
+            <JFXTextArea editable="false" prefHeight="20.0" prefWidth="208.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="199.0">
+         <children>
+            <JFXTextArea editable="false" prefHeight="28.0" prefWidth="173.0" />
+         </children>
+      </VBox>
+      <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Pictures/attach_contact.png" />
+         </image>
+      </ImageView>
+   </children>
+</HBox>

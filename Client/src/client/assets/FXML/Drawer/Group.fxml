@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.GroupController">
+   <children>
+      <HBox prefHeight="52.0" prefWidth="347.0" style="-fx-background-color: #3a63c9;">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#closeGroupDialog" prefHeight="48.0" prefWidth="57.0" text=" ">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="35" />
+               </graphic>
+            </JFXButton>
+            <Label prefHeight="48.0" prefWidth="281.0" text="New Group" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#createGroup" prefHeight="48.0" prefWidth="54.0" text=" ">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="35" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox prefHeight="56.0" prefWidth="347.0">
+         <children>
+            <ImageView fx:id="groupPhoto" accessibleRole="BUTTON" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#selectGroupPhoto" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Pictures/attach_gallery_pressed.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="100.0" prefWidth="297.0">
+               <children>
+                  <JFXTextField fx:id="groupName" focusColor="#0015ff" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="263.0" promptText="Name" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="groupId" focusColor="#0015ff" labelFloat="true" layoutX="14.0" layoutY="62.0" prefHeight="25.0" prefWidth="263.0" promptText="Id" unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <JFXListView id="background3" fx:id="listView" onMouseClicked="#addUsers" stylesheets="@../../style.css" />
+   </children>
+</VBox>
